@@ -10,6 +10,6 @@ namespace Homework2
     {
         static void Main(string[] args)
         {
-        }
+        } 
     }
 }
