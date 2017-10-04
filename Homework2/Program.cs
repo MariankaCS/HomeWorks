@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 
 namespace Homework2
 {
@@ -18,17 +19,17 @@ namespace Homework2
     {
         static void Main(string[] args)
         {
-            Console.Write(@"Enter number of the task" + Environment.NewLine +
+            Console.WriteLine(@"Enter number of the task" + Environment.NewLine +
                 "1 - read 3 float numbers and check: are they all belong to the range[-5, 5]" + Environment.NewLine +
                 "2 - read 3 integers and write max and min of them" + Environment.NewLine +
                 "3 - read number of HTTP Error(400, 401, 402, ...) and write the name of this error" + Environment.NewLine +
                 "4 - declare struct Dog with fields Name, Mark, Age.Declare variable myDog of Dog type and read values for it. " +
                 "Output myDos into console. (Declare method ToString in struct)" + Environment.NewLine +
                 "0 - to exit" + Environment.NewLine+
-                "C - to Clear" + Environment.NewLine);
+                "C - to Clear" );
                 
                 
-            switch (Console.ReadLine().ToUpper())
+            switch (Console.ReadLine().ToUpper().Last().ToString())
             {
                 case "1":
                     FloatFtomRange();
