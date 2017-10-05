@@ -29,7 +29,7 @@ namespace Homework2
                 "C - to Clear" );
                 
                 
-            switch (Console.ReadLine().ToUpper().Last().ToString())
+            switch (Console.ReadLine().ToUpper().LastOrDefault().ToString())
             {
                 case "1":
                     FloatFtomRange();
