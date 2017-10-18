@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework5
 {
-    public class Builder : IDeveloper, IComparable<Builder>
+    public class Builder : IDeveloper
     {
         private string tool;
         public string Tool
@@ -15,11 +15,11 @@ namespace Homework5
             set {tool = value;}
         }
 
-        public int CompareTo(Builder obj)
-        {
-            return Tool.CompareTo(obj.Tool);
-        }
 
+        public int CompareTo(IDeveloper obj)
+        {
+             return Tool.CompareTo((obj as IDeveloper).Tool);
+        }
 
         public string Create()
         {

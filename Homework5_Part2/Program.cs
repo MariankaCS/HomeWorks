@@ -29,7 +29,6 @@ namespace Homework5_Part2
 
             FindNameINDictionary(myDictionary);
             Console.ReadLine();
-
         }
 
         static void FindNameINDictionary(Dictionary<uint, string> myDictionary)

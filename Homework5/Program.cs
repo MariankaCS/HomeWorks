@@ -22,8 +22,8 @@ namespace Homework5
             IDeveloper developer3 = new Programmer();
             developer3.Tool = "Go";
 
-            //workers.Add(builder1);
-           // workers.Add(builder2);
+            workers.Add(builder1);
+            workers.Add(builder2);
             workers.Add(developer1);
             workers.Add(developer2);
             workers.Add(developer3);
@@ -36,8 +36,9 @@ namespace Homework5
             }
             //Console.ReadLine();
 
-            
+
             workers.Sort();
+            workers.Reverse();
 
             foreach (IDeveloper d in workers)
             {
