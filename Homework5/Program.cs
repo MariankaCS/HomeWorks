@@ -28,28 +28,21 @@ namespace Homework5
             workers.Add(developer2);
             workers.Add(developer3);
 
-
+            Console.WriteLine("List of Builders and Programmers");
             foreach (IDeveloper d in workers)
             {
                 Console.WriteLine(d.Create());
                 Console.WriteLine(d.Destroy());
             }
-            //Console.ReadLine();
-
 
             workers.Sort();
-            workers.Reverse();
 
+            Console.WriteLine("List of sorted Tools");
             foreach (IDeveloper d in workers)
             {
                 Console.WriteLine(d.Tool);
             }
             Console.ReadLine();
-
-
-
-
-
 
 
         }

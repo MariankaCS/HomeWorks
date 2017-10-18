@@ -15,7 +15,6 @@ namespace Homework5
             set {tool = value;}
         }
 
-
         public int CompareTo(IDeveloper obj)
         {
              return Tool.CompareTo((obj as IDeveloper).Tool);
