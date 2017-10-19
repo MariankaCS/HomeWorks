@@ -35,13 +35,9 @@ namespace Homework6_Part1
             ShowPhoneNumberByName(phoneBook);
 
             //change numbers with 80 to +80 and write result into New file
-            ChangePrefixesOfNumbers(phoneBook);
+            ChangePrefixesOfPhoneNumbers();
 
-            
-
-
-
-            Console.ReadLine();
+           Console.ReadLine();
         }
 
         static void AddPhonesOnConsole(Dictionary<string, string> phoneBook)
@@ -74,19 +70,25 @@ namespace Homework6_Part1
             Console.WriteLine($"{result}");
         }
 
-        static void ChangePrefixesOfNumbers(Dictionary<string, string> phoneBook)
+        static void ChangePrefixesOfPhoneNumbers()
         {
            
-            foreach (KeyValuePair<string, string> a in phoneBook)
+            Dictionary<string, string> phoneBook1 = new Dictionary<string, string>();
+            using (StreamReader reader = new StreamReader(@"C:\Users\mtsiupka\Documents\Visual Studio 2017\Projects\Homeworks\Homework6_Part1\phones.txt"))
             {
-                if (a.Value.StartsWith("80"))
+                for (int i = 0; i < 9; i++)
                 {
-                    a.Value.Insert(0, "+3");
-                
+                    string[] lines = reader.ReadLine().Split(' ');
+                   
+                    if (lines[1].StartsWith("80"))
+                    {
+                        lines[1]= lines[1].Insert(0, "+3");
+                    }
+                    phoneBook1.Add(lines[0], lines[1]);
+                  //  Console.WriteLine(lines[1]);
                 }
-                Console.WriteLine(a.Value);
             }
-           // WritePhoneIntoFile(phoneBook, @"C:\Users\mtsiupka\Documents\Visual Studio 2017\Projects\Homeworks\Homework6_Part1\New.txt");
+            WritePhoneIntoFile(phoneBook1, @"C:\Users\mtsiupka\Documents\Visual Studio 2017\Projects\Homeworks\Homework6_Part1\New.txt");
         }
     }
 }
