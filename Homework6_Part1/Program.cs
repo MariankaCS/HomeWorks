@@ -40,6 +40,9 @@ namespace Homework6_Part1
            Console.ReadLine();
         }
 
+        /// <summary>
+        /// Write all names and phones from dictionary on Console
+        /// </summary>
         static void AddPhonesOnConsole(Dictionary<string, string> phoneBook)
         {
             Console.WriteLine("Dictionary pairs Name - Phone before manipulations");
@@ -49,6 +52,9 @@ namespace Homework6_Part1
             }
         }
 
+        /// <summary>
+        /// Write phone numbers into file
+        /// </summary>
         static void WritePhoneIntoFile(Dictionary<string, string> phoneBook, string address)
         {
             using (StreamWriter writer = new StreamWriter(address))
@@ -60,6 +66,9 @@ namespace Homework6_Part1
             }
          }
 
+        /// <summary>
+        /// Display phone of the requested person
+        /// </summary>
         static void ShowPhoneNumberByName(Dictionary<string, string> phoneBook)
         {
             Console.WriteLine("Enter name of the person whose phone number you are looking for");
@@ -70,9 +79,11 @@ namespace Homework6_Part1
             Console.WriteLine($"{result}");
         }
 
+        /// <summary>
+        /// Change phone numbers that start with 80 to +380
+        /// </summary>
         static void ChangePrefixesOfPhoneNumbers()
-        {
-           
+        {         
             Dictionary<string, string> phoneBook1 = new Dictionary<string, string>();
             using (StreamReader reader = new StreamReader(@"C:\Users\mtsiupka\Documents\Visual Studio 2017\Projects\Homeworks\Homework6_Part1\phones.txt"))
             {
