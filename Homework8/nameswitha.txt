@@ -1,0 +1,2 @@
+Sqackly with area 0,79 and perimeter 3,14
+Backy with area 36,00 and perimeter 24,00

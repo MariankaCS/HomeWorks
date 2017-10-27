@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework7
+namespace Homework8
 {
-    public class Square : Shape
+    class Square : Shape
     {
         public double Side { get; set; }
         public Square() { }
-        public Square(string name, double side) : base(name)
+        public Square(string name, double side)
+            : base(name)
         {
             Side = side;
         }

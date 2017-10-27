@@ -4,25 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework7
+namespace Homework8
 {
-    public class Square : Shape
+    class Circle : Shape
     {
-        public double Side { get; set; }
-        public Square() { }
-        public Square(string name, double side) : base(name)
+        public double Radius { get; set; }
+        public Circle() { }
+        public Circle(string name, double radius)
+            : base(name)
         {
-            Side = side;
+            Radius = radius;
         }
+
         public override double Area()
         {
-            double area = Side * Side;
+            double area = Math.PI * Radius * Radius;
             return area;
         }
 
         public override double Perimeter()
         {
-            double perimeter = 4 * Side;
+            double perimeter = 2 * Math.PI * Radius;
             return perimeter;
         }
     }
